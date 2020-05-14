@@ -2,8 +2,11 @@
 
 ## Ссылки
 - http://bayanac.narod.ru/Kombrig.html
-- https://ale07.ru/
+- https://ale07.ru
 - http://garmon-ru.ru
+- https://kivanin.ru
+- https://poigarmonika.ru
+- http://russian-garmon.ru
 
 ## Сукачев
 - [Эй ямщик поворачивай к черту](эй-ямщик.md)
