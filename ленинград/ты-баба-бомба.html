@@ -1,0 +1,23 @@
+<html>
+<head>
+	<script type="text/javascript" src="../abcjs_basic_5.10.3-min.js"></script>
+</head>
+<body onload="abc()">
+
+
+	<div id="paper"></div>
+
+	<script>
+		var notes = `
+		'X:1
+		T:Ленинград - Супер-гуд
+		K:D
+		DDAA|BBA2|
+		
+		`
+		function abc() {
+			ABCJS.renderAbc('paper', notes);
+		}
+	</script>
+</body>
+</html>
