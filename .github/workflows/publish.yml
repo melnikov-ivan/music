@@ -20,9 +20,9 @@ jobs:
         uses: github-actions-x/commit@v2.7
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          push-branch: pages
+          push-branch: master
           commit-message: 'publish'
-          rebase: 'true'
+          # rebase: 'true'
           name: Ivan Melnikov
           email: melnikov.ivan@gmail.com 
 
