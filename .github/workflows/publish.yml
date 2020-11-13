@@ -6,10 +6,20 @@ on:
     - master
 
 jobs:
-  check-bats-version:
+  build_site:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
+      
       - run: pip install tagy==0.1.6
       - run: python build.py
+      
+      - name: push
+        uses: github-actions-x/commit@v2.7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          push-branch: pages
+          commit-message: 'publish'
+          rebase: 'true' # pull abd rebase before commit
+
