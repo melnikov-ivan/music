@@ -23,4 +23,6 @@ jobs:
           push-branch: pages
           commit-message: 'publish'
           rebase: 'true'
+          name: Ivan Melnikov
+          email: melnikov.ivan@gmail.com 
 
