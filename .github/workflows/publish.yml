@@ -14,7 +14,7 @@ jobs:
       
       - name: build site
         run: pip install tagy==0.1.6
-      - run: python build.py
+      - run: ./tagy.py -b
       
       - name: push
         uses: github-actions-x/commit@v2.7
