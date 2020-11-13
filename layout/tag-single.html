@@ -1,0 +1,31 @@
+{% extends "page-single.html" %}
+
+{% block page_title %}{{ term }}{% endblock %}
+
+{% block page_content %}
+
+<a href="/">Главная</a>
+{% for path in ('tag/') | breadcrumbs %}
+	
+	{% if not loop.last %}
+	{# find page by path #}
+	{% for page in site.pages | selectattr("path", "equalto", path) %}
+	/ <a href="/{{ page.path }}">{{ page.title }}</a>
+	{% endfor %}
+	{% endif %}
+
+{% endfor %}
+
+{% block tag_content %}
+<h2>&laquo;{{ term | title }}&raquo;</h2>
+
+<ul>
+{% for page in pages %}
+	<li>
+		<a href="/{{ page.path }}">{{ page.title }}</a>
+	</li>
+{% endfor %}
+</ul>
+{% endblock %}
+
+{% endblock %}
