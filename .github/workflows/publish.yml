@@ -25,6 +25,6 @@ jobs:
           git add .
           git commit -m "generated"
           git branch gh-pages
-          git push -f "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git" gh-pages
+          git push --set-upstream -f "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git" gh-pages
         
 
