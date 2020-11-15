@@ -18,9 +18,12 @@ jobs:
       
       - name: push
         run: |
+          cd docs
+          git init
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add docs
+          git add .
           git commit -m "generated"
-          git push -u origin gh-pages
+          git remote add -t gh-pages origin https://melnikov-ivan@github.com/melnikov-ivan/music
+          git push --force -u origin gh-pages
 
