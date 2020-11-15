@@ -25,6 +25,8 @@ jobs:
           git add .
           git commit -m "generated"
           git branch gh-pages
-          git remote add -t gh-pages origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITOR
+          echo $GITHUB_REPOSITOR
+          #git remote add -t gh-pages origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITOR
+          git remote add -t gh-pages origin https://github.com/melnikov-ivan/music
           git push --force -u origin gh-pages
 
