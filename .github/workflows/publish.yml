@@ -11,20 +11,33 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
-      
-      - name: build site
-        run: pip install tagy==0.1.6
-  
-      - run: ./tagy.py -b
 
-      - run: |
-          cd docs
-          git init
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add .
-          git commit -m "generated"
-          git branch gh-pages
-          git push --set-upstream -f "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git" gh-pages
+
+      - name: Build and Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v2
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BASE_BRANCH: master # The branch the action should deploy from.
+        BRANCH: gh-pages # The branch the action should deploy to.
+        FOLDER: docs # The folder the action should deploy.
+        BUILD_SCRIPT: pip install tagy==0.1.6 && ./tagy.py -b
+
+      # - name: build site
+      #   run: pip install tagy==0.1.6
+  
+      # - run: ./tagy.py -b
+
+      # - run: |
+      #     cd docs
+      #     git init
+      #     git config user.name github-actions
+      #     git config user.email github-actions@github.com
+      #     git add .
+      #     git commit -m "generated"
+      #     git branch gh-pages
+      #     git push --set-upstream -f "https://$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git" gh-pages
+
+
+         # $GITHUB_ACTOR:
         
 
