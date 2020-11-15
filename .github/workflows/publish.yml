@@ -24,6 +24,7 @@ jobs:
           git config user.email github-actions@github.com
           git add .
           git commit -m "generated"
+          git branch gh-pages
           git remote add -t gh-pages origin https://melnikov-ivan@github.com/melnikov-ivan/music
           git push --force -u origin gh-pages
 
