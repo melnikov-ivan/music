@@ -27,7 +27,7 @@ jobs:
           cd docs
           git add .
           git commit -m "generated"
-          git push "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$INPUT_REPO.git" gh-pages
+          git push "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git" gh-pages
         #name: publish-tagy-site
         #uses: actions/checkout@v2
         #with: 
