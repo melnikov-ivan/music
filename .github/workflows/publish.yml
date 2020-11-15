@@ -26,12 +26,14 @@ jobs:
       - run: |
           cd docs
           git init
+          git remote add origin "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
+          git branch gh-pages
+      - run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
           git commit -m "generated"
       - run: |
-          git remote add origin "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
           git push -f "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git" gh-pages
         #name: publish-tagy-site
         #uses: actions/checkout@v2
