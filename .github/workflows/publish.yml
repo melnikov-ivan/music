@@ -14,13 +14,10 @@ jobs:
       
       
       
-      - name: config git
-        run: |
-          
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          #git checkout --orphan gh-pages
-          #git worktree add docs gh-pages
+      #- name: config git
+      #  run: |
+      #    #git checkout --orphan gh-pages
+      #    #git worktree add docs gh-pages
 
       - name: build site
         run: pip install tagy==0.1.6
@@ -29,6 +26,8 @@ jobs:
       - run: |
           cd docs
           git init
+          git config user.name github-actions
+          git config user.email github-actions@github.com
           git add .
           git commit -m "generated"
           git push -f "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git" master:gh-pages
