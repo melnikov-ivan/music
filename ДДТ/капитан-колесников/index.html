@@ -4,7 +4,7 @@
     	<meta charset="utf-8">
     	<meta http-equiv="X-UA-Compatible" content="chrome=1">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
-    	<title>404</title>
+    	<title>None</title>
     	<link rel="style:wsheet" href="/assets/style.css">
     	
 		<link rel="alternate" type="application/rss+xml" title="RSS" href="https://imelnikov.ru/atom.xml">
@@ -42,7 +42,39 @@
 
 	
 
-        <h3>404</h3>
+        &lt;html&gt;
+&lt;head&gt;
+    &lt;script type="text/javascript" src="../abcjs_basic_5.10.3-min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body onload="abc()"&gt;
+    &lt;h1&gt;ДДТ - Капитан Колесников&lt;/h1&gt;
+    &lt;h2&gt;На баяне разбор&lt;/h2&gt;
+
+    &lt;iframe width="420" height="315" src="https://www.youtube.com/embed/ZNlFA1C6JVw"&gt;
+    &lt;/iframe&gt;
+
+    &lt;div id="paper"&gt;&lt;/div&gt;
+
+    &lt;script&gt;
+        var notes = `
+        X:1
+        T:ДДТ - Капитан Колесников
+        K:C
+        "Am" A| "Am"  A B c d| "G" e-e-e-e | "C" dc |
+    "Am" c d e | "F" f-f a-a|
+    "G" g f e d | "C" c-c-c-c |
+    "C" c d e | "F" f-f a-a|
+    "G" g f e d | "C" c-c-c-c |
+    "Am" B A | "Dm" e-e f |
+    "E" e d c B A |
+        `
+
+        function abc() {
+            ABCJS.renderAbc('paper', notes);
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 
 	
 
