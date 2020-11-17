@@ -44,40 +44,29 @@
 
 		<h1>None</h1>
 
-        &lt;html&gt;
-&lt;head&gt;
-    &lt;script type="text/javascript" src="../abcjs_basic_5.10.3-min.js"&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body onload="abc()"&gt;
-    &lt;h1&gt;ДДТ - Капитан Колесников&lt;/h1&gt;
-    &lt;h2&gt;На баяне разбор&lt;/h2&gt;
+        <p>Оригинальная тональность Em.</p>
 
-    &lt;iframe width="420" height="315" src="https://www.youtube.com/embed/ZNlFA1C6JVw"&gt;
-    &lt;/iframe&gt;
-
-    &lt;div id="paper"&gt;&lt;/div&gt;
-
-    &lt;script&gt;
-        var notes = `
-        X:1
-        T:ДДТ - Капитан Колесников
-        K:C
-        "Am" A| "Am"  A B c d| "G" e-e-e-e | "C" dc |
-    "Am" c d e | "F" f-f a-a|
-    "G" g f e d | "C" c-c-c-c |
-    "C" c d e | "F" f-f a-a|
-    "G" g f e d | "C" c-c-c-c |
-    "Am" B A | "Dm" e-e f |
-    "E" e d c B A |
-        `
-
-        function abc() {
-            ABCJS.renderAbc('paper', notes);
-        }
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-
+        
+        <script type="text/javascript" src="../../abcjs_basic_5.10.3-min.js"></script>
+		<script>
+			var notes = `X:1
+T:ДДТ - Капитан Колесников
+K:C
+"Am" A| "Am"  A B c d| "G" e-e-e-e | "C" dc |
+"Am" c d e | "F" f-f a-a|
+"G" g f e d | "C" c-c-c-c |
+"C" c d e | "F" f-f a-a|
+"G" g f e d | "C" c-c-c-c |
+"Am" B A | "Dm" e-e f |
+"E" e d c B A |
+`
+			
+			function abc() {
+				ABCJS.renderAbc('paper', notes);
+			}
+			window.onload = abc
+		</script>
+		<div id="paper"></div>
         
 
 	
