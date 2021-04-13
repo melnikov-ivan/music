@@ -58,6 +58,10 @@
 		</script>
 		<div id="paper"></div>
         {% endif %}
+		
+	{% if page.youtube %}
+		<iframe src="https://www.youtube.com/embed/{{page.youtube}}"></iframe>
+	{% endif %}
 
 	{% endblock %}
 
