@@ -11,9 +11,13 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '2.7'
 
       - name: build site
-        run: pip install tagy==0.1.6 
+        run: pip install tagy==0.1.7 
       - run: ./build.py
 
       - name: Deploy 🚀
