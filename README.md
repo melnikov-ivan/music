@@ -23,10 +23,11 @@
 - Вот пуля просвистела
 - Тачанка-ростовчанка
 - Урал-байкер блюз
-- перекресток классно звучит https://www.youtube.com/watch?v=sJuEGLFWnx8
-- Солдат на привале https://www.youtube.com/watch?v=TAme0I_q2EE
-- 18 берез https://www.youtube.com/watch?v=Bk_NEyuC4mw
+- перекресток классно звучит https://youtu.be/sJuEGLFWnx8
+- Солдат на привале https://youtu.be/TAme0I_q2EE
+- 18 берез https://youtu.be/Bk_NEyuC4mw
 - Не спешите нас хоронить
+- Сходятся расходятся https://youtu.be/mnzyvch8lok?t=456
 
 ## Браво
 - 42 минуты под землей
