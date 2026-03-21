@@ -1,4 +1,4 @@
-name: publish-tagy-site
+name: publish-hugo-site
 
 on:
   push:
@@ -10,22 +10,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
-      - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/checkout@v4
         with:
-          python-version: '2.7'
+          submodules: true
 
-      - name: build site
-        run: pip install tagy==0.1.7 
-      - run: ./build.py
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: public # The folder the action should deploy.
+          hugo-version: 'latest'
 
-        
+      - name: Build site
+        run: hugo --minify
 
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
