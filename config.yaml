@@ -1,6 +1,0 @@
-domain: imelnikov.ru/music
-file: True
-date: 2014-08-28
-
-indexes:
-  tag : {url: /tag, layout: tag-single.html}

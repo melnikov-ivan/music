@@ -2,3 +2,6 @@ baseURL = 'https://imelnikov.ru/'
 locale = 'en-us'
 title = 'На баяне'
 theme = 'ananke'
+
+[params]
+mainSections = ['браво', 'ДДТ', 'Любэ', 'ленинград', 'ноль', 'прочее', 'сукачев', 'чайф']
