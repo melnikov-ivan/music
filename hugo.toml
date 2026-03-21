@@ -1,0 +1,4 @@
+baseURL = 'https://imelnikov.ru/'
+locale = 'en-us'
+title = 'На баяне'
+theme = 'ananke'
