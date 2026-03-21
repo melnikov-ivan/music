@@ -1,4 +1,4 @@
-baseURL = 'https://imelnikov.ru/'
+baseURL = 'https://imelnikov.ru/music/'
 locale = 'en-us'
 title = 'На баяне'
 theme = 'ananke'
