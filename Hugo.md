@@ -1,6 +1,8 @@
 ```
+# запустить локальный сервер
 hugo server
 
+# добавить новый контент
 hugo content content/posts/vanek.md
 ```
 
